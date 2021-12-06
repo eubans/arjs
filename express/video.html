@@ -52,16 +52,22 @@
         arjs='trackingMethod: best; sourceType: webcam; debugUIEnabled: false;'>
 
         <a-assets>
-            <video src="https://powerful-forest-87405.herokuapp.com/videoplayback.mp4" preload="auto" id="vid" response-type="arraybuffer" loop crossorigin
-                webkit-playsinline autoplay muted playsinline>
+            <video src="https://powerful-forest-87405.herokuapp.com/videoplayback.mp4" preload="auto" id="vid"
+                response-type="arraybuffer" loop crossorigin webkit-playsinline autoplay muted playsinline>
             </video>
         </a-assets>
 
-        <a-nft videohandler type='nft' url='https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/eubans/arjs/main/image-marker/2016-05-11_16_28_31_9' smooth="true" smoothCount="10"
-            smoothTolerance="0.01" smoothThreshold="5">
+        <a-nft videohandler type='nft'
+            url='https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/eubans/arjs/main/image-marker/2016-05-11_16_28_31_9'
+            smooth="true" smoothCount="10" smoothTolerance="0.01" smoothThreshold="5">
             <a-video src="#vid" position='50 150 -100' rotation='90 0 180' width='300' height='175'>
             </a-video>
         </a-nft>
-        <a-entity camera></a-entity>
+        <a-scene embedded arjs>
+            <!-- create your content here. just a box for now -->
+            <a-box position='0 0.5 0' material='opacity: 0.5;'></a-box>
+            <!-- define a camera which will move according to the marker position -->
+            <a-marker-camera preset='hiro'></a-marker-camera>
+        </a-scene>
     </a-scene>
 </body>
