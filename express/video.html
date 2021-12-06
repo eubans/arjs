@@ -48,9 +48,8 @@
     <div class="arjs-loader">
         <div>Loading, please wait...</div>
     </div>
-    <!-- <a-scene vr-mode-ui="enabled: false;" renderer='antialias: true; alpha: true; precision: mediump;' embedded
-        arjs='trackingMethod: best; sourceType: webcam; debugUIEnabled: false;sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960;'> -->
-	<a-scene stats embedded arjs='sourceType: webcam; detectionMode: mono; maxDetectionRate: 30; canvasWidth: 240; canvasHeight: 180'>
+    <a-scene vr-mode-ui="enabled: false;" renderer='antialias: true; alpha: true; precision: mediump;' embedded
+        arjs='trackingMethod: best; sourceType: webcam; debugUIEnabled: false;'>
 
         <a-assets>
             <video src="https://powerful-forest-87405.herokuapp.com/videoplayback.mp4" preload="auto" id="vid" response-type="arraybuffer" loop crossorigin
