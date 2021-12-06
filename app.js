@@ -26,6 +26,8 @@ router.get('/marker', function (req, res) {
 
 //add the router
 app.use('/', router);
-app.listen(process.env.port || 3000);
+app.listen(process.env.PORT || 3000, function () {
+    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+});
 
 console.log('Running at Port 3000');
