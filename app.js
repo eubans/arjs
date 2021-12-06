@@ -12,6 +12,10 @@ router.get('/image', function (req, res) {
     res.sendFile(path.join(__dirname + '/express/image.html'));
 });
 
+router.get('/video', function (req, res) {
+    res.sendFile(path.join(__dirname + '/express/video.html'));
+});
+
 router.get('/location', function (req, res) {
     res.sendFile(path.join(__dirname + '/express/location.html'));
 });
