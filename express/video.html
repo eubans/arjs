@@ -49,19 +49,60 @@
         <div>Loading, please wait...</div>
     </div>
     <a-scene vr-mode-ui="enabled: false;" renderer='antialias: true; alpha: true; precision: mediump;' embedded
-        arjs='trackingMethod: best; sourceType: webcam; debugUIEnabled: false;' sound="src: url(https://powerful-forest-87405.herokuapp.com/videoplayback.mp4); autoplay: true">
+        arjs='trackingMethod: best; sourceType: webcam; debugUIEnabled: false;'>
 
+        <!-- model 1 -->
         <a-assets>
-            <video src="https://powerful-forest-87405.herokuapp.com/videoplayback.mp4" preload="auto" id="vid" response-type="arraybuffer" loop crossorigin
-                webkit-playsinline autoplay muted playsinline>
+            <video src="https://powerful-forest-87405.herokuapp.com/videoplayback-1.mp4" preload="auto" id="modelvid1" response-type="arraybuffer" loop crossorigin
+                webkit-playsinline autoplay playsinline>
             </video>
         </a-assets>
 
-        <a-nft videohandler type='nft' url='https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/eubans/arjs/main/image-marker/2016-05-11_16_28_31_9' smooth="true" smoothCount="10"
+        <a-nft videohandler type='nft' url='https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/eubans/arjs/main/image-marker/model1' smooth="true" smoothCount="10"
             smoothTolerance="0.01" smoothThreshold="5">
-            <a-video src="#vid" position='50 150 -100' rotation='90 0 180' width='300' height='175'>
+            <a-video src="#modelvid1" position='50 150 -100' rotation='90 0 180' width='300' height='175'>
             </a-video>
         </a-nft>
+
+        <!-- model 2 -->
+        <a-assets>
+            <video src="https://powerful-forest-87405.herokuapp.com/videoplayback-2.mp4" preload="auto" id="modelvid2" response-type="arraybuffer" loop crossorigin
+                webkit-playsinline autoplay playsinline>
+            </video>
+        </a-assets>
+
+        <a-nft videohandler type='nft' url='https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/eubans/arjs/main/image-marker/model2' smooth="true" smoothCount="10"
+            smoothTolerance="0.01" smoothThreshold="5">
+            <a-video src="#modelvid1" position='50 150 -100' rotation='90 0 180' width='300' height='175'>
+            </a-video>
+        </a-nft>
+
+        <!-- model 3 -->
+        <a-assets>
+            <video src="https://powerful-forest-87405.herokuapp.com/videoplayback-3.mp4" preload="auto" id="modelvid3" response-type="arraybuffer" loop crossorigin
+                webkit-playsinline autoplay playsinline>
+            </video>
+        </a-assets>
+
+        <a-nft videohandler type='nft' url='https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/eubans/arjs/main/image-marker/model3' smooth="true" smoothCount="10"
+            smoothTolerance="0.01" smoothThreshold="5">
+            <a-video src="#modelvid1" position='50 150 -100' rotation='90 0 180' width='300' height='175'>
+            </a-video>
+        </a-nft>
+
+        <!-- model 4 -->
+        <a-assets>
+            <video src="https://powerful-forest-87405.herokuapp.com/videoplayback-4.mp4" preload="auto" id="modelvid4" response-type="arraybuffer" loop crossorigin
+                webkit-playsinline autoplay playsinline>
+            </video>
+        </a-assets>
+
+        <a-nft videohandler type='nft' url='https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/eubans/arjs/main/image-marker/model4' smooth="true" smoothCount="10"
+            smoothTolerance="0.01" smoothThreshold="5">
+            <a-video src="#modelvid1" position='50 150 -100' rotation='90 0 180' width='300' height='175'>
+            </a-video>
+        </a-nft>
+
         <a-entity camera></a-entity>
     </a-scene>
 </body>
