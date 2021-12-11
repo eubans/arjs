@@ -2,24 +2,6 @@
     src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
 
 <script src='https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js'></script>
-<script>
-    const arController = document.querySelector("a-scene").systems.arjs._arSession.arContext.arController;
-
-    arController.addEventListener("getMarker", (evt) => {
-        const markerType = evt.data.type;
-        const patternType = 0;
-
-        console.log(evt.data.type);
-
-        console.log("onMarkerFound!!");
-
-        if (markerType == patternType) {
-            console.log("onMarkerFound out pattern!!");
-
-            //Do stuff...
-        }
-    });
-</script>
 
 <style>
     .arjs-loader {
