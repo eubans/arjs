@@ -62,11 +62,23 @@
     <a-scene vr-mode-ui="enabled: false;" renderer="logarithmicDepthBuffer: true;" embedded
         arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
         <!-- we use cors proxy to avoid cross-origin problems -->
+        
+        <!-- model 1 -->
         <a-nft fromspherical type="nft"
             url="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/eubans/arjs/main/image-marker/model1"
             smooth="true" smoothCount="10" smoothTolerance=".01" smoothThreshold="5">
             <a-entity
                 gltf-model="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/eubans/arjs/main/model/model1-embedded.gltf"
+                scale="25 25 25" position="100 50 -250" rotation="-90 0 0">
+            </a-entity>
+        </a-nft>
+
+        <!-- model 2 -->
+        <a-nft fromspherical type="nft"
+            url="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/eubans/arjs/main/image-marker/model2"
+            smooth="true" smoothCount="10" smoothTolerance=".01" smoothThreshold="5">
+            <a-entity
+                gltf-model="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/eubans/arjs/main/model/skull/scene.gltf"
                 scale="25 25 25" position="100 50 -250" rotation="-90 0 0">
             </a-entity>
         </a-nft>
