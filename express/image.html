@@ -53,6 +53,25 @@
             this.el.setAttribute('look-at', '[camera]')
         }
     })
+
+    AFRAME.registerComponent('modelplaysound', {
+        init: function () {
+            this.toggle = false;
+            this.entity = document.querySelector("[sound]")
+            this.entity.components.sound.pauseSound();
+        },
+        tick: function () {
+            if (this.el.object3D.visible == true) {
+                if (!this.toggle) {
+                    this.toggle = true;
+                    this.entity.components.sound.playSound();
+                }
+            } else {
+                this.toggle = false;
+                this.entity.components.sound.pauseSound();
+            }
+        }
+    });
 </script>
 
 <body style="margin : 0px; overflow: hidden;">
@@ -80,12 +99,12 @@
             smooth="true" smoothCount="10" smoothTolerance=".01" smoothThreshold="5">
             <a-entity
                 gltf-model="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/eubans/arjs/main/model/model2.gltf"
-                scale="10 10 10" position="100 50 -250" rotation="-90 0 0">
+                scale="10 10 10" position="100 50 0" rotation="-90 0 0">
             </a-entity>
         </a-nft>
 
         <!-- model 3 -->
-        <a-nft fromspherical type="nft"
+        <a-nft modelplaysound fromspherical type="nft"
             url="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/eubans/arjs/main/image-marker/model3"
             smooth="true" smoothCount="10" smoothTolerance=".01" smoothThreshold="5">
             <!-- <a-entity
