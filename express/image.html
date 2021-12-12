@@ -23,6 +23,37 @@
     }
 </style>
 
+<script>
+    // Register the component
+    AFRAME.registerComponent('fromspherical', {
+        // we will use two angles and a radius provided by the user 
+        schema: {
+            fi: {},
+            theta: {},
+            r: {},
+        },
+        init: function () {
+            // lets change it to radians
+            let fi = this.data.fi * Math.PI / 180
+            let theta = this.data.theta * Math.PI / 180
+
+            // The 'horizontal axis is x. The 'vertical' is y. 
+            // The calculations below are straight from the wiki site.
+            let z = (-1) * Math.sin(theta) * Math.cos(fi) * this.data.r
+            let x = Math.sin(theta) * Math.sin(fi) * this.data.r
+            let y = Math.cos(theta) * this.data.r
+            // position the element using the provided data
+            this.el.setAttribute('position', {
+                x: x,
+                y: y,
+                z: z
+            })
+            // rotate the element towards the camera
+            this.el.setAttribute('look-at', '[camera]')
+        }
+    })
+</script>
+
 <body style="margin : 0px; overflow: hidden;">
     <!-- minimal loader shown until image descriptors are loaded -->
     <div class="arjs-loader">
@@ -31,7 +62,7 @@
     <a-scene vr-mode-ui="enabled: false;" renderer="logarithmicDepthBuffer: true;" embedded
         arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
         <!-- we use cors proxy to avoid cross-origin problems -->
-        <a-nft type="nft"
+        <a-nft fromspherical type="nft"
             url="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/eubans/arjs/main/image-marker/model1"
             smooth="true" smoothCount="10" smoothTolerance=".01" smoothThreshold="5">
             <a-entity
