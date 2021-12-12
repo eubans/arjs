@@ -6560,12 +6560,12 @@
   "buffers": [
     {
       "byteLength": 863184,
-      "uri": "scene.bin"
+      "uri": "https://raw.githack.com/eubans/arjs/main/model/sf/scene.bin"
     }
   ],
   "images": [
     {
-      "uri": "textures/Material_35_baseColor.png"
+      "uri": "https://raw.githack.com/eubans/arjs/main/model/sf/textures/Material_35_baseColor.png"
     }
   ],
   "materials": [
