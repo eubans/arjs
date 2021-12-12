@@ -194,7 +194,7 @@
     "buffers" : [
         {
             "byteLength" : 188352,
-            "uri" : "model1.bin"
+            "uri" : "https://arjs-cors-proxy.herokuapp.com/https://github.com/eubans/arjs/blob/main/model/model1.bin"
         }
     ]
 }
