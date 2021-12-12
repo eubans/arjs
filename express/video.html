@@ -43,6 +43,63 @@
             }
         }
     });
+
+    AFRAME.registerComponent('vidhandler2', {
+        init: function () {
+            this.toggle = false;
+            this.vid = document.querySelector("#modelvid2")
+            this.vid.pause()
+        },
+        tick: function () {
+            if (this.el.object3D.visible == true) {
+                if (!this.toggle) {
+                    this.toggle = true;
+                    this.vid.play();
+                }
+            } else {
+                this.toggle = false;
+                this.vid.pause();
+            }
+        }
+    });
+
+    AFRAME.registerComponent('vidhandler3', {
+        init: function () {
+            this.toggle = false;
+            this.vid = document.querySelector("#modelvid3")
+            this.vid.pause()
+        },
+        tick: function () {
+            if (this.el.object3D.visible == true) {
+                if (!this.toggle) {
+                    this.toggle = true;
+                    this.vid.play();
+                }
+            } else {
+                this.toggle = false;
+                this.vid.pause();
+            }
+        }
+    });
+
+    AFRAME.registerComponent('vidhandler4', {
+        init: function () {
+            this.toggle = false;
+            this.vid = document.querySelector("#modelvid4")
+            this.vid.pause()
+        },
+        tick: function () {
+            if (this.el.object3D.visible == true) {
+                if (!this.toggle) {
+                    this.toggle = true;
+                    this.vid.play();
+                }
+            } else {
+                this.toggle = false;
+                this.vid.pause();
+            }
+        }
+    });
 </script>
 
 <body style='margin : 0px; overflow: hidden;'>
@@ -62,7 +119,7 @@
         <a-nft vidhandler1 videohandler type='nft'
             url='https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/eubans/arjs/main/image-marker/model1'
             smooth="true" smoothCount="10" smoothTolerance="0.01" smoothThreshold="5">
-            <a-video src="#modelvid1">
+            <a-video src="#modelvid1" position='50 150 -100' rotation='90 0 180' width='300' height='175'>
             </a-video>
         </a-nft>
 
@@ -73,7 +130,7 @@
             </video>
         </a-assets>
 
-        <a-nft videohandler type='nft'
+        <a-nft vidhandler2 videohandler type='nft'
             url='https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/eubans/arjs/main/image-marker/model2'
             smooth="true" smoothCount="10" smoothTolerance="0.01" smoothThreshold="5">
             <a-video src="#modelvid2" position='50 150 -100' rotation='90 0 180' width='300' height='175'>
@@ -87,7 +144,7 @@
             </video>
         </a-assets>
 
-        <a-nft videohandler type='nft'
+        <a-nft vidhandler3 videohandler type='nft'
             url='https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/eubans/arjs/main/image-marker/model3'
             smooth="true" smoothCount="10" smoothTolerance="0.01" smoothThreshold="5">
             <a-video src="#modelvid3" position='50 150 -100' rotation='90 0 180' width='300' height='175'>
@@ -101,7 +158,7 @@
             </video>
         </a-assets>
 
-        <a-nft videohandler type='nft'
+        <a-nft vidhandler4 videohandler type='nft'
             url='https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/eubans/arjs/main/image-marker/model4'
             smooth="true" smoothCount="10" smoothTolerance="0.01" smoothThreshold="5">
             <a-video src="#modelvid4" position='50 150 -100' rotation='90 0 180' width='300' height='175'>
