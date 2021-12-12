@@ -1,7 +1,7 @@
 <script
     src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
 <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+<script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
 
 <style>
     .arjs-loader {
@@ -88,13 +88,14 @@
         <a-nft fromspherical type="nft"
             url="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/eubans/arjs/main/image-marker/model3"
             smooth="true" smoothCount="10" smoothTolerance=".01" smoothThreshold="5">
-            <!-- <a-entity
-                gltf-model="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/eubans/arjs/main/model/sf/scene.gltf"
+            <a-entity
+                animation-mixer="clip: *;"
+                gltf-model="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/digitalmaniak/webAR/master/scene.gltf"
                 scale="250 250 250" position="100 50 -250" rotation="-90 0 0">
-            </a-entity> -->
-            <a-entity scale="250 250 250" position="0 1 0" animation-mixer="clip: *;"
-                gltf-model="src: url(https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/digitalmaniak/webAR/master/scene.gltf);">
             </a-entity>
+            <!-- <a-entity scale="250 250 250" position="0 1 0" animation-mixer="clip: *;"
+                gltf-model="src: url(https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/digitalmaniak/webAR/master/scene.gltf);">
+            </a-entity> -->
         </a-nft>
 
         <!-- model 4 -->
