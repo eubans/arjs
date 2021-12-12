@@ -53,6 +53,19 @@
             this.el.setAttribute('look-at', '[camera]')
         }
     })
+
+    AFRAME.registerComponent('threedancing1', {
+        tick: function () {
+            // marker is the object3D of marker
+            if (marker.visible && !this.markervisible) {
+                var audio = new Audio('https://powerful-forest-87405.herokuapp.com/videoplayback-3.mp4');
+                audio.play();
+                this.markervisible = true;
+            } else if (!marker.visible) {
+                this.markervisible = false;
+            }
+        }
+    });
 </script>
 
 <body style="margin : 0px; overflow: hidden;">
@@ -85,7 +98,7 @@
         </a-nft>
 
         <!-- model 3 -->
-        <a-nft fromspherical type="nft"
+        <a-nft fromspherical threedancing1 type="nft"
             url="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/eubans/arjs/main/image-marker/model3"
             smooth="true" smoothCount="10" smoothTolerance=".01" smoothThreshold="5">
             <!-- <a-entity
