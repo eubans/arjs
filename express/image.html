@@ -60,7 +60,7 @@
         <div>Loading, please wait...</div>
     </div>
     <a-scene vr-mode-ui="enabled: false;" renderer="logarithmicDepthBuffer: true;" embedded
-        arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: true;">
+        arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
         <!-- we use cors proxy to avoid cross-origin problems -->
 
         <!-- model 1 -->
@@ -88,7 +88,8 @@
             url="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/eubans/arjs/main/image-marker/model3"
             smooth="true" smoothCount="10" smoothTolerance=".01" smoothThreshold="5">
             <a-gltf-model src="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/eubans/arjs/main/model/sf/scene.gltf" position="0 2 0.25"
-                rotation="90 180 0" scale="0.01 0.01 0.01" animation-mixer="clip: Take 001; loop:once"> </a-gltf-model>
+                rotation="90 180 0" scale="0.01 0.01 0.01" animation-mixer="clip: Take 001; loop:once"> 
+            </a-gltf-model>
         </a-nft>
 
         <!-- model 4 -->
